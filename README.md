@@ -56,15 +56,6 @@ A full-stack Point of Sale (POS) Web Application built for **BeeMart**, adhering
 
 ---
 
-### 3. Transaction History (`History Transaction`)
-* **Date Filter:** Date picker input for querying daily transaction logs.
-* **Role-Based Supervision:**
-  * **Cashier:** Restricted to viewing only transactions executed by their own account.
-  * **Admin:** Privileged supervision view showing transactions across all cashiers.
-* **Pagination & Sorting:** Sorted in **Ascending order** by transaction timestamp, limited to **20 records per page** (displays page navigation controls even for 1 or zero records).
-
----
-
 ## 📁 Project Repository Structure
 
 ```text
