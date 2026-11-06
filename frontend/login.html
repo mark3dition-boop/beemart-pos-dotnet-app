@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Login</title>
+    <link rel="stylesheet" href="Styles/login.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>BeeMart Login</h2>
+
+        <!-- Alert Popup / Message untuk Handling Error -->
+        <div id="errorMessage" class="error-alert" style="display: none;"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" required>
+                    <option value="Cashier">Kasir</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+
+            <div class="register-link">
+                Belum punya akun? <a href="register.html">Register</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS/config.js"></script>
+    <script src="JS/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Register</title>
+    <link rel="stylesheet" href="Styles/login.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>Register Akun</h2>
+
+        <!-- Alert Popup / Message untuk Error atau Sukses -->
+        <div id="errorMessage" class="error-alert" style="display: none;"></div>
+        <div id="successMessage" class="success-alert" style="display: none;"></div>
+
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rePassword">Re-Password</label>
+                <input type="password" id="rePassword" placeholder="Ulangi password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" required>
+                    <option value="Cashier">Kasir</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-login">Daftar</button>
+
+            <div class="register-link">
+                Sudah punya akun? <a href="login.html">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS/config.js"></script>
+    <script src="JS/register.js"></script>
+</body>
+</html>

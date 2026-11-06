@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - Transaction</title>
+    <link rel="stylesheet" href="Styles/transaction.css">
+</head>
+<body>
+
+    <!-- Header Sesi User & Wktu Real-time -->
+    <header class="header-bar">
+        <div class="brand">BeeMart</div>
+        <div class="header-right">
+            <span id="sessionInfo" class="session-info">4/9/2026, 10.34.00 | Kasir: -</span>
+            <button id="btnLogout" class="btn-logout">Logout</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <div class="content-card">
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <a href="transaction.html" class="tab-item active">New Transaction</a>
+                <a href="history.html" class="tab-item">History Transaction</a>
+            </div>
+
+            <!-- Invoice Number Banner -->
+            <div class="invoice-box">
+                <strong>Invoice No:</strong> <span id="invoiceNo">Memuat...</span>
+            </div>
+
+            <!-- Form Pencarian Barang -->
+            <div class="search-section">
+                <label for="searchInput">Cari Barang (Ketik: Apel / Susu, lalu tekan Enter)</label>
+                <input type="text" id="searchInput" placeholder="Ketik nama barang..." autocomplete="off">
+            </div>
+
+            <!-- Tabel Hasil Pencarian Barang -->
+            <div id="searchResultsContainer" class="table-responsive" style="display: none; margin-bottom: 20px;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Berat</th>
+                            <th>Stock</th>
+                            <th>Harga</th>
+                            <th>Diskon</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchResultsTable">
+                        <!-- Diisi via JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Box Barang Terpilih -->
+            <div id="selectedProductBox" class="selected-product-box" style="display: none;">
+                <div class="selected-title" id="selectedProductName">Barang Terpilih: -</div>
+                <div class="selected-details">
+                    <span>Harga Satuan: <strong id="selectedProductPrice">Rp 0</strong></span>
+                    <span>Sisa Stock: <strong id="selectedProductStock">0</strong></span>
+                    <div class="qty-input-group">
+                        <label for="inputQty">Qty:</label>
+                        <input type="number" id="inputQty" min="1" value="1">
+                    </div>
+                    <button type="button" id="btnAddToCart" class="btn-primary">Masukkan ke Keranjang</button>
+                </div>
+            </div>
+
+            <!-- Section Daftar Belanjaan -->
+            <div class="cart-section">
+                <h3>Daftar Belanjaan</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Barang</th>
+                                <th>Harga</th>
+                                <th>Diskon</th>
+                                <th>Qty</th>
+                                <th>Subtotal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody">
+                            <!-- Diisi via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Total Summary & Payment Method -->
+                <div class="cart-summary">
+                    <div class="total-price-text">
+                        Total: <span id="totalPriceText">Rp 0</span>
+                    </div>
+
+                    <div class="payment-method-group">
+                        <label for="paymentMethodSelect" style="font-weight: bold;">Metode Pembayaran:</label>
+                        <select id="paymentMethodSelect">
+                            <!-- Opsi diisi secara dinamis via JS dengan Cash sebagai default -->
+                        </select>
+                    </div>
+
+                    <button type="button" id="btnSubmitTransaction" class="btn-submit-transaction">Submit Transaksi</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/config.js"></script>
+    <script src="JS/transaction.js"></script>
+</body>
+</html>

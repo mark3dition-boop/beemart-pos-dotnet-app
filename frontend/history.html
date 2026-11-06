@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMart - History Transaction</title>
+    <link rel="stylesheet" href="Styles/history.css">
+</head>
+<body>
+
+    <!-- Header Sesi User & Real-time Clock -->
+    <header class="header-bar">
+        <div class="brand">BeeMart</div>
+        <div class="header-right">
+            <span id="sessionInfo" class="session-info">Role: - | Login: -</span>
+            <button id="btnLogout" class="btn-logout">Logout</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <div class="content-card">
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <a href="transaction.html" class="tab-item">New Transaction</a>
+                <a href="history.html" class="tab-item active">History Transaction</a>
+            </div>
+
+            <!-- Dynamic Role Label Search Section -->
+            <div id="searchRoleLabel" class="search-role-label">
+                Pencarian Data Transaksi
+            </div>
+
+            <!-- Filter Date Form -->
+            <form id="filterForm" class="filter-section">
+                <label for="transactionDate">Pilih Tanggal:</label>
+                <input type="date" id="transactionDate" required>
+                <button type="submit" class="btn-primary">Cari Data</button>
+            </form>
+
+            <!-- Error / Alert Banner -->
+            <div id="errorMessage" class="error-alert" style="display: none;"></div>
+
+            <!-- Tabel Riwayat Transaksi -->
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No. Transaksi</th>
+                            <th>Tanggal & Jam</th>
+                            <th>Kasir</th>
+                            <th>Jml Item</th>
+                            <th>Pembayaran</th>
+                            <th>Total Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <!-- Diisi via JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Container Pagination -->
+            <div id="paginationContainer" class="pagination-container">
+                <!-- Tombol Halaman diisi via JS -->
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/config.js"></script>
+    <script src="JS/history.js"></script>
+</body>
+</html>
